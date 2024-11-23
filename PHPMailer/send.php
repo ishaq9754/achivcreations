@@ -1,7 +1,7 @@
 <?php
-$email=$_POST['email'];
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
+$email= $_POST['email'];
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -27,7 +27,7 @@ try {
 
     //Recipients
     $mail->setFrom('official@achivcreations.in', 'Details');
-    $mail->addAddress( $email, 'Mohd Ishaq');     //Add a recipient
+    $mail->addAddress(  $email , 'Mohd Ishaq');     //Add a recipient
    
     
 
@@ -41,3 +41,4 @@ try {
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+?>
