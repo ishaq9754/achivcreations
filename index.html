@@ -485,9 +485,9 @@
                 </div>
                 <div class="col-xs-12 col-sm-5">
                     <div class="subs-form">
-                        <form id="mc-form">
+                        <form id="mc-form" action="PHPMailer/send.php" method="post">
                             <div class="input-group">
-                                <input type="email" class="form-control" id="mc-email" placeholder="Emaill address">
+                                <input type="email" class="form-control" id="mc-email" name="email" placeholder="Emaill address">
                                 <div class="input-group-btn">
                                     <button class="btn btn-warning">Send</button>
                                 </div>

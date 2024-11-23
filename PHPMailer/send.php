@@ -1,4 +1,5 @@
 <?php
+$email=$_POST['email'];
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -26,14 +27,14 @@ try {
 
     //Recipients
     $mail->setFrom('official@achivcreations.in', 'Details');
-    $mail->addAddress('mohdishaq9754@gmail.com', 'Mohd Ishaq');     //Add a recipient
+    $mail->addAddress( $email, 'Mohd Ishaq');     //Add a recipient
    
     
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Details';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->Subject = 'Thanks for subscribing Achiv Creations';
+    $mail->Body    = "Hello User <br> <b>Congratulations!</b>You've taken the first step toward a fantastic journey with Achiv Crteations.  <br> <br> Your subscription is almost complete. Please check and  confirm yourEmail: $email . <br> <br>We can't wait to have you on board. Get ready for exclusive content, updates, and much more. Your adventure with us begins now! <br> <br> Best Regards, <br>The Achiv Creations Team</br>";
 
     $mail->send();
     echo 'Message has been sent';
