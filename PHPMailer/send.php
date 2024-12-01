@@ -1,7 +1,8 @@
 <?php
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
-$email= $_POST['email'];
+$email= $_POST["email"];
+// $email="mohdishaq9754@gmail.com";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
